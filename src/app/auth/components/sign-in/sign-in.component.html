@@ -1,0 +1,59 @@
+<div class="grid-container">
+  <div class="grid-row ">
+    <div class="grid-col-fill" *ngIf="isFormValid() || isLoginError">
+      <app-message [message]="VALIDATION_MESSAGE" [messageType]="MESSAGE_TYPE"></app-message>
+    </div> 
+    <div class="grid-col-fill" *ngIf="isLoginAttemptFailed">
+      <app-message [message]="VALIDATION_LOGON_FAILED_MESSAGE" [messageType]="MESSAGE_TYPE"></app-message>
+    </div>
+  </div>
+  <form class="usa-form margin-x-auto" [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+    <div class="grid-row">
+
+      <legend class="usa-legend">Sign In</legend><br>
+      <div class="width-full">
+        <span>or
+          <button  type="button" class="usa-button usa-button--unstyled" routerLink="/register">create an account</button>
+        </span>
+      </div>
+
+      <fieldset class="usa-fieldset width-full">
+        <div class="usa-form-group " [class.usa-form-group--error]="isUsernameError()">
+          <label class="usa-label" for="username">Username or email address</label>
+          <span class="usa-error-message" id="input-error-message" role="alert" *ngIf="isUsernameError()">Please enter
+            email address</span>
+          <input class="usa-input" [class.usa-input--error]="isUsernameError()" type="text" autocapitalize="off"
+            autocorrect="off" required aria-required="true" formControlName="username">
+        </div>
+      </fieldset>
+
+
+      <fieldset class="usa-fieldset width-full">
+        <div class="usa-form-group " [class.usa-form-group--error]="isPasswordError()">
+          <label class="usa-label" for="password">Password</label>
+          <span class="usa-error-message" id="input-error-message" role="alert" *ngIf="isPasswordError()">Please enter
+            password</span>
+          <input class="usa-input" [class.usa-input--error]="isPasswordError()" id="password-sign-in" type="password"
+            formControlName="password">
+          <p class="usa-form__note">
+            <a title="Show password" href="javascript:void(0);" class="usa-show-password"
+              aria-controls="password-sign-in">Show password</a>
+          </p>
+        </div>
+      </fieldset>
+
+    </div>
+
+    <div class="grid-row flex-column">
+      <div class="grid-col">
+        <input class="usa-button width-full" type="submit" value="Sign in">
+      </div>
+      <div class="grid-col"> <button  type="button" class="usa-button usa-button--unstyled" routerLink="/forgot-username">Forgot
+          username?</button>
+      </div>
+      <div class="grid-col"><button type="button"  class="usa-button usa-button--unstyled" routerLink="/forgot-password">Forgot
+          password?</button>
+      </div>
+    </div>
+  </form>
+</div>

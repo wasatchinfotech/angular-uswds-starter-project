@@ -25,12 +25,14 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets", 
+              { "glob": "**/*", "input": "node_modules/uswds/dist/img", "output": "./assets/img" } 
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/uswds/dist/scss/uswds.scss"
             ],
-            "scripts": []
+            "scripts": ["node_modules/uswds/dist/js/uswds.min.js"]
           },
           "configurations": {
             "production": {
