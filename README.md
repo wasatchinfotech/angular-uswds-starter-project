@@ -1,6 +1,6 @@
 # USWDS based Angular Starter Project
 
-This is starter Angular project based on the USWDS theme, mostly suited for the US Federal Govt Projects.
+Starter Angular project based on the USWDS theme, mostly suited for the US Federal Govt Projects.
 
 The [United States Web Design System](https://designsystem.digital.gov) includes a library of open source UI components and a visual style guide for U.S. federal government websites.
 
@@ -37,15 +37,32 @@ webpack                           4.42.0
 
 ## Running the project
 
-``` 
+
 git clone https://github.com/wasatchinfotech/angular-uswds-starter-project.git
 
+``` 
 npm install
+
+```
 
 After installing all the required modules, start the serve with
 
+```
 ng serve 
+
+```
 
 Open link : http://localhost:4200/
 
-```
+http://localhost:4200/sign-in
+
+angular/angular9
+
+This will create auth features to go secured pages, also dynamically show/hide nav links based on authentication
+
+http://localhost:4200/dashboard
+
+
+## Contact
+
+rahul.dongre@wasatchinfotech.com
