@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { FormBuilder, Validators, FormGroup, ValidatorFn, AbstractControl, ValidationErrors } from '@angular/forms';
+import { FormBuilder, Validators, FormGroup} from '@angular/forms';
 import { MessageType } from '../../../shared/enums/message-type.enum';
 import { MESSAGES_CONFIG } from '../../../shared/config/message.config';
 import { CommonService } from '../../../shared/services/common.service';

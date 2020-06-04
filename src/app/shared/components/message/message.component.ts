@@ -1,5 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MessageType } from '../../enums/message-type.enum';
+import { Component, OnInit, Input } from '@angular/core'; 
 
 @Component({
   selector: 'app-message',

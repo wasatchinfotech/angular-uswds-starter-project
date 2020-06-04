@@ -4,8 +4,7 @@ import { MessageType } from '../../../shared/enums/message-type.enum';
 import { MESSAGES_CONFIG } from '../../../shared/config/message.config';
 import { AuthService } from '../../../shared/services/auth.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { map } from 'rxjs/operators';
-import { Subject } from 'rxjs';
+import { map } from 'rxjs/operators'; 
 import { CommonService } from '../../../shared/services/common.service';
 
 @Component({
