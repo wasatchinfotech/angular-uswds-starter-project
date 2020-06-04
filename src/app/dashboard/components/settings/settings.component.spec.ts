@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SettingsComponent } from './settings.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('SettingsComponent', () => {
   let component: SettingsComponent;
@@ -8,6 +10,8 @@ describe('SettingsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+
+      imports :[ ReactiveFormsModule, FormsModule, HttpClientTestingModule],
       declarations: [ SettingsComponent ]
     })
     .compileComponents();

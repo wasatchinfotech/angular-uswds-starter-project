@@ -12,8 +12,6 @@ export class CommonService {
   private authModuleSource = new BehaviorSubject<boolean>(false);
   isAuthModule$ = this.authModuleSource.asObservable();
 
-  constructor() { }
-
   publishUserAuthentication(isLogged: boolean) {
     this.userLoggedInSource.next(isLogged);
   }

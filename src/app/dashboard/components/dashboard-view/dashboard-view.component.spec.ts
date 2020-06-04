@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { DashboardViewComponent } from './dashboard-view.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('DashboardViewComponent', () => {
   let component: DashboardViewComponent;
@@ -8,6 +10,8 @@ describe('DashboardViewComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+
+      imports :[ ReactiveFormsModule, FormsModule, HttpClientTestingModule],
       declarations: [ DashboardViewComponent ]
     })
     .compileComponents();

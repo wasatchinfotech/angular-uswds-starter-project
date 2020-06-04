@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ResetPasswordComponent } from './reset-password.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CommonService } from 'src/app/shared/services/common.service';
 
 describe('ResetPasswordComponent', () => {
   let component: ResetPasswordComponent;
@@ -8,6 +10,8 @@ describe('ResetPasswordComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports :[ ReactiveFormsModule, FormsModule],
+      providers: [CommonService],
       declarations: [ ResetPasswordComponent ]
     })
     .compileComponents();

@@ -1,6 +1,13 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignInComponent } from './sign-in.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClient, HttpHandler } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
+import { AuthService } from '../../../shared/services/auth.service';
+import { CommonService } from '../../../shared/services/common.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('SignInComponent', () => {
   let component: SignInComponent;
@@ -8,9 +15,11 @@ describe('SignInComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignInComponent ]
+      imports: [ReactiveFormsModule, FormsModule, HttpClientTestingModule, RouterTestingModule],
+      providers: [AuthService, CommonService],
+      declarations: [SignInComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +30,9 @@ describe('SignInComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  afterEach(() => {
+    TestBed.resetTestingModule();
   });
 });

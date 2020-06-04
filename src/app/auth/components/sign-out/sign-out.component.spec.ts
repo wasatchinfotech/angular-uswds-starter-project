@@ -1,13 +1,17 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignOutComponent } from './sign-out.component';
+import { HttpHandler, HttpClient } from '@angular/common/http';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('SignOutComponent', () => {
   let component: SignOutComponent;
   let fixture: ComponentFixture<SignOutComponent>;
 
   beforeEach(async(() => {
+    
     TestBed.configureTestingModule({
+      imports: [HttpClientTestingModule],
       declarations: [ SignOutComponent ]
     })
     .compileComponents();
