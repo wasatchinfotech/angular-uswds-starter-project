@@ -11,6 +11,9 @@ export class HeaderComponent implements OnInit {
 
   isLoginRequired = false;
   inAuthModule = false;
+  isOpen = false;
+  isFirstMenuOpen = false;
+  isSecondMenuOpen = false;
 
   constructor(private commonService: CommonService, private authService: AuthService) {
     commonService.isUserAuthenticated$.subscribe(res => {

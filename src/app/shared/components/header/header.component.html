@@ -10,12 +10,13 @@
           <p class="usa-banner__header-text">An official website of the United States government</p>
           <p class="usa-banner__header-action" aria-hidden="true">Here’s how you know</p>
         </div>
-        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner">
+        <button class="usa-accordion__button usa-banner__button" aria-expanded="false" aria-controls="gov-banner"
+          (click)="isOpen=true">
           <span class="usa-banner__button-text">Here’s how you know</span>
         </button>
       </div>
     </header>
-    <div class="usa-banner__content usa-accordion__content" id="gov-banner">
+    <div class="usa-banner__content usa-accordion__content" id="gov-banner" [hidden]="!isOpen">
       <div class="grid-row grid-gap-lg">
         <div class="usa-banner__guidance tablet:grid-col-6">
           <img class="usa-banner__icon usa-media-block__img" src="/assets/img/icon-dot-gov.svg" alt="Dot gov">
@@ -59,8 +60,8 @@
         <ul class="usa-nav__primary usa-accordion">
           <li class="usa-nav__primary-item">
             <button class="usa-accordion__button usa-nav__link  usa-current" aria-expanded="false"
-              aria-controls="basic-nav-section-one"><span>Secured</span></button>
-            <ul id="basic-nav-section-one" class="usa-nav__submenu">
+              aria-controls="basic-nav-section-one" (click)="isFirstMenuOpen=true"><span>Secured</span></button>
+            <ul id="basic-nav-section-one" class="usa-nav__submenu" [hidden]="!isFirstMenuOpen">
               <li class="usa-nav__submenu-item" [hidden]="!isLoginRequired">
                 <a routerLink="/dashboard" class="">Dashboard</a>
               </li>
@@ -74,8 +75,8 @@
           </li>
           <li class="usa-nav__primary-item">
             <button class="usa-accordion__button usa-nav__link" aria-expanded="false"
-              aria-controls="basic-nav-section-two"><span>Unsecured</span></button>
-            <ul id="basic-nav-section-two" class="usa-nav__submenu">
+              aria-controls="basic-nav-section-two" (click)="isSecondMenuOpen=true"><span>Unsecured</span></button>
+            <ul id="basic-nav-section-two" class="usa-nav__submenu" [hidden]="!isSecondMenuOpen">
               <li class="usa-nav__submenu-item">
                 <a href="#" class=""> Navigation link</a>
               </li>
