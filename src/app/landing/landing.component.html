@@ -80,8 +80,14 @@
                 you are, your goal or mission, and how you approach it. Use this section to encourage them to act.
                 Describe why they should get in touch here, and use an active verb on the button below. “Get in touch,”
                 “Learn more,” and so on.</p>
-            <a class="usa-button usa-button--big" href="#">Call to action</a>
-        </div>
+            <div class="grid-row flex-row">
+                <div class="grid-col"><button (click)="toggleCard()" class="usa-button usa-button--outline">Toggle Card
+                        Visibility</button></div>
+                <div class="grid-col">
+                    <app-base-card #landingCard [isHidden]="false"></app-base-card>
+                </div>
+            </div>
+        </div>  
     </section>
 
 </main>
