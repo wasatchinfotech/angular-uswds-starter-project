@@ -1,13 +1,14 @@
 {
   "name": "angular-uswds-starter-project",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "build-ghp":"ng build --prod --output-path docs --base-href /angular-uswds-starter-project/"
   },
   "private": true,
   "dependencies": {
